@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm ci
+      - run: npm install --legacy-peer-deps
       - name: 'Checking PR Naming Convention'
         continue-on-error: false
         shell: bash
@@ -79,8 +79,8 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm ci
-      - run: npm typecheck
+      - run: npm install --legacy-peer-deps
+      - run: npm run typecheck
 
   codestyle:
     runs-on: ubuntu-latest
@@ -92,8 +92,8 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm ci
-      - run: npm codestyle
+      - run: npm install --legacy-peer-deps
+      - run: npm run codestyle
 
   lint:
     runs-on: ubuntu-latest
@@ -105,8 +105,8 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm ci
-      - run: npm lint
+      - run: npm install --legacy-peer-deps
+      - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -118,5 +118,5 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm ci
-      - run: npm test:ci
+      - run: npm install --legacy-peer-deps
+      - run: npm run test:ci
