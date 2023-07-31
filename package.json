@@ -95,7 +95,7 @@
     "semantic-release": "^19.0.5",
     "shx": "^0.3.4",
     "ts-jest": "^29.1.1",
-    "tsup": "^6.7.0",
+    "tsup": "^7.1.0",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
